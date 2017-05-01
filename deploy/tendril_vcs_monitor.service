@@ -1,0 +1,17 @@
+
+[Unit]
+Description=Tendril Vendor Maintenance Server
+
+[Service]
+ExecStart=/usr/bin/twistd --nodaemon --pidfile= vendor_monitor.tac
+
+WorkingDirectory=/home/tendril/tools/vendor_monitor/deploy
+
+User=tendril
+Group=tendril
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
